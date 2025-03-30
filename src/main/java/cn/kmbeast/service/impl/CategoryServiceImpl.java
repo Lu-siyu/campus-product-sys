@@ -29,8 +29,6 @@ public class CategoryServiceImpl implements CategoryService {
      */
     @Override
     public Result<String> save(Category category) {
-        System.out.println("hhh");
-        System.out.println("h1h");
         if (!StringUtils.hasText(category.getName())) {
             return ApiResult.error("商品分类名不能为空");
         }
