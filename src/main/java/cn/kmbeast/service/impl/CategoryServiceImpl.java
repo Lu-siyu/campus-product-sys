@@ -30,8 +30,8 @@ public class CategoryServiceImpl implements CategoryService {
     @Override
     public Result<String> save(Category category) {
         System.out.println("123");
+        System.out.println(category);
         if (!StringUtils.hasText(category.getName())) {
-            System.out.println("ads");
             return ApiResult.error("商品分类名不能为空");
         }
         categoryMapper.save(category);
